@@ -1,6 +1,7 @@
 const express = require('express');
 const projectsController = require('./controllers/ProjectsController');
 const bugsController = require('./controllers/BugsController');
+const projectsBugsController = require('./controllers/ProjectsBugsController');
 
 
 const router = express.Router();
@@ -16,4 +17,7 @@ router.post('/bugs', bugsController.create);
 router.get('/bugs/:id', bugsController.show);
 router.put('/bugs/:id', bugsController.update);
 router.delete('/bugs/:id', bugsController.delete);
+
+router.get('/projects/:projectId/bugs', projectsBugsController.show);
+router.post('/projects/:projectId/bugs', projectsBugsController.create);
 module.exports = router;

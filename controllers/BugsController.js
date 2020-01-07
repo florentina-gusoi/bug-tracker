@@ -7,7 +7,7 @@ const BugsController = {
             .findByPk(req.params.id)
             .then(data => {
                 if (!data) {
-                    return res.send({});
+                    return res.status(404).send({});
                 }
 
                 return res.send(data);
@@ -45,6 +45,7 @@ const BugsController = {
                     .then(data => res.send(data));
             });
     },
+
     delete: (req, res) => {
         const id = req.params.id;
         models

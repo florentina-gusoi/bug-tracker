@@ -7,7 +7,7 @@ const ProjectsController = {
             .findByPk(req.params.id)
             .then(data => {
                 if (!data) {
-                    return res.send({});
+                    return res.status(404).send({});
                 }
 
                 return res.send(data);
