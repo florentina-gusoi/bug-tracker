@@ -14,6 +14,7 @@ router.use('/projects', authenticationMiddleware);
 router.use('/bugs', authenticationMiddleware);
 router.use('/projects/:projectId/bugs', authenticationMiddleware);
 router.use('/users', authenticationMiddleware);
+router.use('/users/:userId/projects', authenticationMiddleware);
 //USERS
 
 router.get('/users', usersController.index);
