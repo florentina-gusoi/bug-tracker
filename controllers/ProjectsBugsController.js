@@ -6,7 +6,7 @@ const ProjectsBugsController = {
         models
             .Project
             .findAll()
-            .then(project => models.Bug.findAll({where: {projectId: req.params.projectId,}}))
+            .then(project => models.Bug.findAll({where: {projectId: parseInt(req.params.projectId),}}))
             .then(project => {
                 return models
                     .Project
