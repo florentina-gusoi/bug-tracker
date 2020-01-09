@@ -31,7 +31,7 @@ router.put('/projects/:id', projectsController.update);
 router.delete('/projects/:id', projectsController.delete);
 
 //USERSPROJECTS
-router.get('/usersprojects', usersProjectController.index);
+router.get('/users/projects', usersProjectController.index);
 router.get('/users/:userId/projects', usersProjectController.show);
 
 //BUGS
